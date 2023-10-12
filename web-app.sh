@@ -21,8 +21,8 @@ echo "CMD python /home/myapp/sample_app.py" >> tempdir/Dockerfile
 
 cd tempdir
 
-sudo docker build -t sampleapp .
+docker build -t sampleapp .
 
-sudo docker run -t -d -p 5000:5000 --name samplerunning sampleapp    
+docker run -t -d -p 5000:5000 --name samplerunning sampleapp    
 
-sudo docker ps -a
+docker ps -a
