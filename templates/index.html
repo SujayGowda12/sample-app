@@ -1,9 +1,27 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Sample app</title>
-<link rel="stylesheet" href="/static/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evolving Ltd</title>
+    <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-<h1>You are calling me from {{request.remote_addr}}</h1>
+    <header style="background-color: green; text-align: center; padding: 10px;">
+        <h1 style="color: black;">Evolving Ltd</h1>
+        <nav>
+            <a href="#" style="margin: 0 10px; color: black;">Login Page</a> |
+            <a href="#" style="margin: 0 10px; color: black;">Contact Us</a> |
+            <a href="#" style="margin: 0 10px; color: black;">About Us</a> |
+            <a href="#" style="margin: 0 10px; color: black;">Payment</a> |
+            <a href="#" style="margin: 0 10px; color: black;">FAQ</a>
+        </nav>
+    </header>
+    <main style="text-align: center; margin-top: 50px;">
+        <form>
+            <input type="text" placeholder="Search" style="padding: 10px; font-size: 16px;">
+            <button type="submit" style="padding: 10px; font-size: 16px;">Search</button>
+        </form>
+    </main>
 </body>
 </html>

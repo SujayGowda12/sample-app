@@ -1,1 +1,66 @@
-body {background: lightsteelblue;}
+/* General styles */
+body {
+    font-family: Calibri, sans-serif; /* Changed to Calibri */
+    margin: 0;
+    padding: 0;
+    background-color: #e6a9c9; /* Light pink from your low-fi mockup */
+    color: #000; /* Black text */
+}
+
+/* Header styles */
+header {
+    background-color: #62c462; /* Green from your low-fi mockup */
+    color: black; /* Black text */
+    padding: 10px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Navigation bar styles */
+nav {
+    background-color: #62c462; /* Green */
+    display: flex;
+    justify-content: center;
+    padding: 5px 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Search box styles */
+.search-container {
+    text-align: center;
+    margin: 50px auto;
+}
+
+.search-container input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-container input[type="submit"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #62c462; /* Green */
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-container input[type="submit"]:hover {
+    background-color: #55a455; /* Slightly darker green */
+}
+
