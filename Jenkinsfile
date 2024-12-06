@@ -1,20 +1,20 @@
 pipeline {
     agent any
     stages {
-        stage('Build') {
+        stage('Clone Repository') {
             steps {
-                echo 'Building...'
+                git 'https://github.com/SujayGowda12/sample-app.git'
             }
         }
-        stage('Test') {
+        stage('Run Ansible Playbook') {
             steps {
-                echo 'Testing...'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying...'
+                withCredentials([string(credentialsId: 'vault-password-id', variable: 'VAULT_PASSWORD')]) {
+                    sh '''
+                    ansible-playbook -i hosts install_apache.yml --vault-password-file <(echo $VAULT_PASSWORD)
+                    '''
+                }
             }
         }
     }
 }
+
