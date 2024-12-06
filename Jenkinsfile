@@ -8,10 +8,12 @@ pipeline {
         }
         stage('Run Ansible Playbook') {
             steps {
-                withCredentials([string(credentialsId: 'vault-password-id', variable: 'VAULT_PASSWORD')]) {
-                    sh '''
-                    ansible-playbook -i hosts install_apache.yml --vault-password-file <(echo $VAULT_PASSWORD)
-                    '''
+                dir('ansible-sample-app') {
+                    withCredentials([string(credentialsId: 'vault-password-id', variable: 'VAULT_PASSWORD')]) {
+                        sh '''
+                        ansible-playbook -i hosts install_apache.yml --vault-password-file <(echo $VAULT_PASSWORD)
+                        '''
+                    }
                 }
             }
         }
