@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/SujayGowda12/sample-app.git'
+                git credentialsId: 'github-integration', url: 'https://github.com/SujayGowda12/sample-app.git'
             }
         }
         stage('Run Ansible Playbook') {
