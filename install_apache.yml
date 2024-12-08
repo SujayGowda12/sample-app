@@ -2,7 +2,7 @@
   hosts: localhost
   become: yes
   tasks:
-    - name: Ensure Apache is installed
+    - name: Install Apache
       yum:
         name: httpd
         state: present
@@ -13,14 +13,14 @@
         state: started
         enabled: yes
 
-    - name: Copy the HTML file
+    - name: Copy HTML file
       copy:
-        src: /home/ec2-user/sample-app/templates/index.html
+        src: templates/index.html
         dest: /var/www/html/index.html
 
-    - name: Copy the static assets
+    - name: Copy static assets
       copy:
-        src: /home/ec2-user/sample-app/static/
+        src: static/
         dest: /var/www/html/static/
         remote_src: no
 
