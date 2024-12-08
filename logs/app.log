@@ -1,0 +1,18 @@
+2024-12-08 13:50:06,478 - INFO - Flask application has started
+2024-12-08 13:50:06,478 - INFO - Starting Flask application on port 5000
+2024-12-08 14:15:27,403 - INFO - Flask application has started
+2024-12-08 14:15:27,403 - INFO - Starting Flask application on port 5000
+2024-12-08 14:15:27,411 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.30.217:5000
+2024-12-08 14:15:27,412 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-08 14:19:47,853 - INFO - Flask application has started
+2024-12-08 14:19:47,854 - INFO - Starting Flask application on port 5000
+2024-12-08 14:19:47,859 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.30.217:5000
+2024-12-08 14:19:47,859 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-08 14:20:34,248 - INFO - Main endpoint accessed
+2024-12-08 14:20:34,251 - INFO - 44.196.123.216 - - [08/Dec/2024 14:20:34] "GET / HTTP/1.1" 200 -
