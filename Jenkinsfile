@@ -1,47 +1,58 @@
 pipeline {
     agent any
+    environment {
+        DOCKER_CREDENTIALS_ID = 'dockerhub-credentials-id'
+        DOCKER_IMAGE = 'sujaygowda12/sample-app:latest'
+    }
     stages {
         stage('Clean Workspace') {
             steps {
-                deleteDir() // Clears the workspace to ensure no leftover files interfere.
+                deleteDir()
             }
         }
-
         stage('Clone Repositories') {
             steps {
                 script {
-                    // Clone the application repository
-                    git credentialsId: 'github-integration', 
-                        url: 'https://github.com/SujayGowda12/sample-app.git'
-
-                    // Clone the Ansible playbook repository
+                    git credentialsId: 'github-integration', url: 'https://github.com/SujayGowda12/sample-app.git'
                     dir('ansible-sample-app') {
-                        git credentialsId: 'github-integration', 
-                            url: 'https://github.com/SujayGowda12/ansible-playbook.git', 
-                            branch: 'main'
+                        git credentialsId: 'github-integration', url: 'https://github.com/SujayGowda12/ansible-playbook.git', branch: 'main'
                     }
                 }
             }
         }
-
-        stage('Build and Push Docker Image') {
+        stage('Build Docker Image') {
             steps {
                 script {
-                    def image = docker.build('sujaygowda12/sample-app:latest')
-                    withDockerRegistry(credentialsId: 'docker-hub-creds', url: 'https://index.docker.io/v1/') {
-                        image.push()
+                    sh 'docker build -t $DOCKER_IMAGE .'
+                }
+            }
+        }
+        stage('Login to DockerHub') {
+            steps {
+                script {
+                    withCredentials([usernamePassword(
+                        credentialsId: "${DOCKER_CREDENTIALS_ID}",
+                        usernameVariable: 'DOCKER_USERNAME',
+                        passwordVariable: 'DOCKER_PASSWORD'
+                    )]) {
+                        sh 'docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD'
                     }
                 }
             }
         }
-
+        stage('Push Docker Image') {
+            steps {
+                script {
+                    sh 'docker push $DOCKER_IMAGE'
+                }
+            }
+        }
         stage('Run Ansible Playbook') {
             steps {
                 dir('ansible-sample-app') {
                     withCredentials([string(credentialsId: 'vault-password-id', variable: 'VAULT_PASSWORD')]) {
                         sh '''
-                        ansible-playbook -i hosts install_apache.yml \
-                        --vault-password-file <(echo $VAULT_PASSWORD)
+                        ansible-playbook -i hosts install_apache.yml --vault-password-file <(echo $VAULT_PASSWORD)
                         '''
                     }
                 }
@@ -50,14 +61,15 @@ pipeline {
     }
     post {
         always {
-            echo "Pipeline execution completed."
-            cleanWs() // Cleans up the workspace after execution
+            script {
+                sh 'docker rmi $DOCKER_IMAGE || true'
+            }
         }
         success {
-            echo "Pipeline executed successfully!"
+            echo 'Pipeline executed successfully.'
         }
         failure {
-            echo "Pipeline failed. Check logs for details."
+            echo 'Pipeline execution failed.'
         }
     }
 }
