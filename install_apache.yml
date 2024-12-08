@@ -1,0 +1,28 @@
+- name: Install and Configure Apache
+  hosts: localhost
+  become: yes
+  vars_files:
+    - secrets.yml
+  tasks:
+    - name: Ensure Apache is installed
+      yum:
+        name: httpd
+        state: present
+
+    - name: Start and enable Apache
+      systemd:
+        name: httpd
+        state: started
+        enabled: yes
+
+    - name: Copy the HTML file
+      copy:
+        src: /home/ec2-user/sample-app/templates/index.html
+        dest: /var/www/html/index.html
+
+    - name: Copy the static assets
+      copy:
+        src: /home/ec2-user/sample-app/static/
+        dest: /var/www/html/static/
+        remote_src: no
+
