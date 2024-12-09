@@ -24,3 +24,9 @@
         dest: /var/www/html/static/
         remote_src: no
 
+    - name: Create a test file
+      file:
+        path: /tmp/ansible_test_file.txt
+        state: touch
+        mode: '0644'
+
