@@ -28,3 +28,55 @@
 2024-12-08 15:10:34,284 - INFO - 44.196.123.216 - - [08/Dec/2024 15:10:34] "GET / HTTP/1.1" 200 -
 2024-12-08 15:20:34,289 - INFO - Main endpoint accessed
 2024-12-08 15:20:34,290 - INFO - 44.196.123.216 - - [08/Dec/2024 15:20:34] "GET / HTTP/1.1" 200 -
+2024-12-12 20:29:57,787 - INFO - Flask application has started
+2024-12-12 20:29:57,789 - INFO - Starting Flask application on port 5000
+2024-12-12 20:29:57,798 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.30.217:5000
+2024-12-12 20:29:57,798 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-12 20:34:55,636 - INFO - Flask application has started
+2024-12-12 20:34:55,636 - INFO - Starting Flask application on port 5000
+2024-12-12 20:34:55,645 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.30.217:5000
+2024-12-12 20:34:55,645 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-12 20:39:09,723 - INFO - Main endpoint accessed
+2024-12-12 20:39:09,727 - INFO - 51.148.152.74 - - [12/Dec/2024 20:39:09] "GET / HTTP/1.1" 200 -
+2024-12-12 20:39:10,088 - INFO - 51.148.152.74 - - [12/Dec/2024 20:39:10] "GET /static/style.css HTTP/1.1" 200 -
+2024-12-12 20:39:10,357 - INFO - 51.148.152.74 - - [12/Dec/2024 20:39:10] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-12-12 20:40:30,552 - INFO - Main endpoint accessed
+2024-12-12 20:40:30,553 - INFO - 44.196.123.216 - - [12/Dec/2024 20:40:30] "GET / HTTP/1.1" 200 -
+2024-12-12 20:50:30,558 - INFO - Main endpoint accessed
+2024-12-12 20:50:30,558 - INFO - 44.196.123.216 - - [12/Dec/2024 20:50:30] "GET / HTTP/1.1" 200 -
+2024-12-12 21:00:30,565 - INFO - Main endpoint accessed
+2024-12-12 21:00:30,565 - INFO - 44.196.123.216 - - [12/Dec/2024 21:00:30] "GET / HTTP/1.1" 200 -
+2024-12-12 21:10:30,572 - INFO - Main endpoint accessed
+2024-12-12 21:10:30,572 - INFO - 44.196.123.216 - - [12/Dec/2024 21:10:30] "GET / HTTP/1.1" 200 -
+2024-12-12 21:20:30,580 - INFO - Main endpoint accessed
+2024-12-12 21:20:30,580 - INFO - 44.196.123.216 - - [12/Dec/2024 21:20:30] "GET / HTTP/1.1" 200 -
+2024-12-12 21:30:30,587 - INFO - Main endpoint accessed
+2024-12-12 21:30:30,587 - INFO - 44.196.123.216 - - [12/Dec/2024 21:30:30] "GET / HTTP/1.1" 200 -
+2024-12-12 21:40:30,592 - INFO - Main endpoint accessed
+2024-12-12 21:40:30,592 - INFO - 44.196.123.216 - - [12/Dec/2024 21:40:30] "GET / HTTP/1.1" 200 -
+2024-12-12 21:50:30,597 - INFO - Main endpoint accessed
+2024-12-12 21:50:30,597 - INFO - 44.196.123.216 - - [12/Dec/2024 21:50:30] "GET / HTTP/1.1" 200 -
+2024-12-12 22:00:30,604 - INFO - Main endpoint accessed
+2024-12-12 22:00:30,605 - INFO - 44.196.123.216 - - [12/Dec/2024 22:00:30] "GET / HTTP/1.1" 200 -
+2024-12-12 22:10:30,612 - INFO - Main endpoint accessed
+2024-12-12 22:10:30,613 - INFO - 44.196.123.216 - - [12/Dec/2024 22:10:30] "GET / HTTP/1.1" 200 -
+2024-12-12 22:20:30,618 - INFO - Main endpoint accessed
+2024-12-12 22:20:30,618 - INFO - 44.196.123.216 - - [12/Dec/2024 22:20:30] "GET / HTTP/1.1" 200 -
+2024-12-12 22:30:30,625 - INFO - Main endpoint accessed
+2024-12-12 22:30:30,625 - INFO - 44.196.123.216 - - [12/Dec/2024 22:30:30] "GET / HTTP/1.1" 200 -
+2024-12-12 22:40:30,632 - INFO - Main endpoint accessed
+2024-12-12 22:40:30,633 - INFO - 44.196.123.216 - - [12/Dec/2024 22:40:30] "GET / HTTP/1.1" 200 -
+2024-12-12 22:50:30,641 - INFO - Main endpoint accessed
+2024-12-12 22:50:30,641 - INFO - 44.196.123.216 - - [12/Dec/2024 22:50:30] "GET / HTTP/1.1" 200 -
+2024-12-12 23:00:30,648 - INFO - Main endpoint accessed
+2024-12-12 23:00:30,648 - INFO - 44.196.123.216 - - [12/Dec/2024 23:00:30] "GET / HTTP/1.1" 200 -
+2024-12-12 23:10:30,653 - INFO - Main endpoint accessed
+2024-12-12 23:10:30,653 - INFO - 44.196.123.216 - - [12/Dec/2024 23:10:30] "GET / HTTP/1.1" 200 -
+2024-12-12 23:20:30,659 - INFO - Main endpoint accessed
+2024-12-12 23:20:30,660 - INFO - 44.196.123.216 - - [12/Dec/2024 23:20:30] "GET / HTTP/1.1" 200 -
